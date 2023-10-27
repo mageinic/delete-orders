@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageINIC
+ * Copyright (C) 2023 MageINIC <support@mageinic.com>
+ *
+ * NOTICE OF LICENSE
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see https://opensource.org/licenses/gpl-3.0.html.
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category MageINIC
+ * @package MageINIC_DeleteOrders
+ * @copyright Copyright (c) 2023 MageINIC (https://www.mageinic.com/)
+ * @license https://opensource.org/licenses/gpl-3.0.html GNU General Public License,version 3 (GPL-3.0)
+ * @author MageINIC <support@mageinic.com>
+ */
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="mi_delete_orders" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="5"
+                 translate="label">
+            <label>Delete Orders</label>
+            <tab>mageinic</tab>
+            <resource>MageINIC_DeleteOrders::delete_orders_config</resource>
+            <group id="general" translate="label" type="text" sortOrder="1000"
+                   showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Delete Orders Configuration</label>
+                <field id="enable_disable" translate="label comment" type="select" sortOrder="10"
+                       showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable Delete Orders</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                    <comment><![CDATA[Select <b>Enable</b> to enable this module.<br />]]></comment>
+                </field>
+                <field id="shipment" translate="label comment" type="select" sortOrder="15"
+                       showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Delete Order Shipment</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[Select <b>Yes</b> to order Shipment.<br />]]></comment>
+                    <depends>
+                        <field id="mi_delete_orders/general/enable_disable">1</field>
+                    </depends>
+                </field>
+                <field id="invoice" translate="label comment" type="select" sortOrder="20"
+                       showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Delete Order Invoice</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[Select <b>Yes</b> to order Invoice.<br />]]></comment>
+                    <depends>
+                        <field id="mi_delete_orders/general/enable_disable">1</field>
+                    </depends>
+                </field>
+                <field id="creditmemo" translate="label comment" type="select" sortOrder="25"
+                       showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Delete Order Credit Memo</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[Select <b>Yes</b> to Delete order Credit Memo.<br />]]></comment>
+                    <depends>
+                        <field id="mi_delete_orders/general/enable_disable">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

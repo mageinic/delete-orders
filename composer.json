@@ -1,0 +1,30 @@
+{
+    "name": "mageinic/deleteorders",
+    "description": "The DeleteOrder Extension for deleting orders,invoice,shipment and credit memos developed by MageINIC team",
+    "type": "magento2-module",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "version": "1.0.0",
+    "require": {
+        "php": "^8.0",
+        "mageinic/core": "1.0.*",
+        "magento/module-sales": "103.0.*"
+    },
+    "authors": [
+        {
+            "name": "MageINIC",
+            "email": "support@mageinic.com",
+            "homepage": "https://www.mageinic.com"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "MageINIC\\DeleteOrders\\": ""
+        }
+    }
+}
