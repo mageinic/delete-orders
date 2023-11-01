@@ -1,6 +1,6 @@
 {
     "name": "mageinic/deleteorders",
-    "description": "The DeleteOrder Extension for deleting orders,invoice,shipment and credit memos developed by MageINIC team",
+    "description": "Delete Orders by MageINIC, The Magento 2 Delete Orders extension empowers administrators to efficiently remove unwanted orders, invoices, shipments, and credit memos from the backend, ensuring a streamlined and organized e-commerce operation. Simplify order management, maintain data consistency, and enjoy the flexibility to enable or disable deletion features as needed.",
     "type": "magento2-module",
     "license": [
         "OSL-3.0",
