@@ -11,7 +11,7 @@
 Run the following command in Magento 2 root folder
 
 ```
-composer require mageinic/deleteorders
+composer require mageinic/delete-orders
 
 php bin/magento maintenance:enable
 php bin/magento setup:upgrade
@@ -23,7 +23,7 @@ php bin/magento cache:flush
 
 ## 2. How to use
 
-- Please refer to the `DeleteOrders Extension User Guide.pdf` file for instructions on how to use the extension.
+- Please refer to the `Delete Orders Extension User Guide.pdf` file for instructions on how to use the extension.
 
 ## 3. Get Support
 
